@@ -25,7 +25,7 @@ int main(void) {
     int n;
     scanf("%d", &n);
 
-        // Dynamiczna alokacja pamięci dla tablicy
+// Dynamiczna alokacja pamięci dla tablicy
 
 
     int *tab = (int *)malloc(n * sizeof(int));
