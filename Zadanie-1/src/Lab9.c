@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Funkcja oblicza min, max i średnią i zapisuje wyniki w zmiennych wskazywanych przez wskaźniki
+
 void get_stats(const int *tab, int n, int *min, int *max, double *avg) {
     int suma = 0;
 
@@ -23,9 +25,12 @@ int main(void) {
     int n;
     scanf("%d", &n);
 
+        // Dynamiczna alokacja pamięci dla tablicy
+
+
     int *tab = (int *)malloc(n * sizeof(int));
-    if (tab == NULL) {
-        return 1; // błąd alokacji
+    if (tab == NULL) {   // sprawdzenie poprawności alokacji
+        return 1; 
     }
 
     for (int i = 0; i < n; i++) {
@@ -39,7 +44,7 @@ int main(void) {
 
     printf("min=%d max=%d avg=%.2f\n", wynik_min, wynik_max, wynik_avg);
 
-    free(tab);
+    free(tab); // zwolnienie pamięci
     tab = NULL;
 
     return 0;
